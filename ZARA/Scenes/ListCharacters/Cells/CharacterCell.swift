@@ -38,9 +38,13 @@ extension UIImageView {
         }
         
         DispatchQueue.main.async { [weak self] in
-            if let imageData = try? Data(contentsOf: url) {
+            if let cachedImage = Cache.instance.getObject(for: url.absoluteString) {
+                self?.image = cachedImage
+            }
+            else if let imageData = try? Data(contentsOf: url) {
                 if let loadedImage = UIImage(data: imageData) {
                     self?.image = loadedImage
+                    Cache.instance.setObject(loadedImage, for: url.absoluteString)
                 }
             }
         }

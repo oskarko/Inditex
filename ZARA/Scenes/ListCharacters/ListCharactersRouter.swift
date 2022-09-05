@@ -17,29 +17,6 @@ final class ListCharactersRouter: ListCharactersRoutingLogic {
     // MARK: - Properties
     
     weak var viewController: ListCharactersViewController?
-
-    // MARK: - Helpers
-    
-//    static func getViewController() -> ListCharactersViewController {
-//        let configuration = configureModule()
-//
-//        return configuration.vc
-//    }
-    
-//    private static func configureModule() -> (vc: ListCharactersViewController, vm: ListCharactersViewModel, rt: ListCharactersRouter) {
-//        let viewController = ListCharactersViewController()
-//        let router = ListCharactersRouter()
-//        let viewModel = ListCharactersViewModel()
-//
-//        viewController.viewModel = viewModel
-//
-//        viewModel.router = router
-//        viewModel.view = viewController
-//
-//        router.viewController = viewController
-//
-//        return (viewController, viewModel, router)
-//    }
     
     // MARK: - Routes
     

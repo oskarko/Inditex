@@ -17,20 +17,17 @@ final class ListCharactersInteractor: ListCharactersBusinessLogic {
     
     // MARK: - Properties
     
-    var presenter: ListCharactersPresenter?
-    var useCase: FetchCharactersUseCase?
+    var useCase: FetchCharactersUseCase
 
     // MARK: - Lifecycle
     
-//    init(_ useCase: FetchCharactersUseCase = FetchCharactersUseCase()) {
-//        self.useCase = useCase
-//    }
+    init(_ composer: FetchCharactersUseCaseOutputComposer) {
+        self.useCase = FetchCharactersUseCase(output: composer)
+    }
     
     // MARK: - Helpers
     
     func fetchCharacters() {
-        useCase = FetchCharactersUseCase(output: presenter!)
-        useCase?.start()
+        useCase.start()
     }
-    
 }

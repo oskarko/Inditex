@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E23EA0BC28C5CBF700F04D88 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23EA0BB28C5CBF700F04D88 /* Cache.swift */; };
+		E23EA0BE28C5E06500F04D88 /* FetchCharactersUseCaseOutputComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23EA0BD28C5E06500F04D88 /* FetchCharactersUseCaseOutputComposer.swift */; };
 		E26704A528C51A9E009B9F24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26704A428C51A9E009B9F24 /* AppDelegate.swift */; };
 		E26704A728C51A9E009B9F24 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26704A628C51A9E009B9F24 /* SceneDelegate.swift */; };
 		E26704AE28C51A9F009B9F24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E26704AD28C51A9F009B9F24 /* Assets.xcassets */; };
@@ -53,6 +55,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E23EA0BB28C5CBF700F04D88 /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
+		E23EA0BD28C5E06500F04D88 /* FetchCharactersUseCaseOutputComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchCharactersUseCaseOutputComposer.swift; sourceTree = "<group>"; };
 		E26704A128C51A9E009B9F24 /* ZARA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZARA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E26704A428C51A9E009B9F24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E26704A628C51A9E009B9F24 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +114,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E23EA0BA28C5CBE300F04D88 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				E23EA0BB28C5CBF700F04D88 /* Cache.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		E267049828C51A9E009B9F24 = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +148,7 @@
 				E26704D428C51AC9009B9F24 /* App */,
 				E26704D528C51AD3009B9F24 /* Resources */,
 				E26704E728C52600009B9F24 /* NetworkingLayer */,
+				E23EA0BA28C5CBE300F04D88 /* Managers */,
 				E26704E428C5255C009B9F24 /* Business Logic */,
 				E26704D628C51B19009B9F24 /* Scenes */,
 				E26704B228C51A9F009B9F24 /* Info.plist */,
@@ -204,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				E26704E528C5258C009B9F24 /* FetchCharactersUseCase.swift */,
+				E23EA0BD28C5E06500F04D88 /* FetchCharactersUseCaseOutputComposer.swift */,
 			);
 			path = "Business Logic";
 			sourceTree = "<group>";
@@ -396,6 +410,7 @@
 				E26704F428C52655009B9F24 /* APIRequest.swift in Sources */,
 				E26704EC28C52647009B9F24 /* NetworkRequester.swift in Sources */,
 				E26704E628C5258D009B9F24 /* FetchCharactersUseCase.swift in Sources */,
+				E23EA0BC28C5CBF700F04D88 /* Cache.swift in Sources */,
 				E26704ED28C52647009B9F24 /* NetworkRequest.swift in Sources */,
 				E26704F228C52655009B9F24 /* APIErrorResponse.swift in Sources */,
 				E26704A528C51A9E009B9F24 /* AppDelegate.swift in Sources */,
@@ -404,6 +419,7 @@
 				E26704F528C52655009B9F24 /* ResultResponse.swift in Sources */,
 				E26704FE28C528BE009B9F24 /* CharactersResponse.swift in Sources */,
 				E26704F328C52655009B9F24 /* HTTPMethod.swift in Sources */,
+				E23EA0BE28C5E06500F04D88 /* FetchCharactersUseCaseOutputComposer.swift in Sources */,
 				E267050228C535A9009B9F24 /* CharacterCell.swift in Sources */,
 				E26704DE28C51B85009B9F24 /* ListCharactersPresenter.swift in Sources */,
 				E26704E128C51CB1009B9F24 /* ListCharactersConfiguration.swift in Sources */,

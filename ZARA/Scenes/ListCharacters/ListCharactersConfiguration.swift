@@ -23,13 +23,13 @@ extension ListCharactersConfiguration {
     
     private static func configureModule() -> ListCharactersModule {
         let viewController = ListCharactersViewController()
-        let interactor = ListCharactersInteractor()
         let presenter = ListCharactersPresenter()
+        let composer = FetchCharactersUseCaseOutputComposer([presenter])
+        let interactor = ListCharactersInteractor(composer)
         let router = ListCharactersRouter()
 
         viewController.interactor = interactor
         viewController.router = router
-        interactor.presenter = presenter
         presenter.view = viewController
         router.viewController = viewController
 
