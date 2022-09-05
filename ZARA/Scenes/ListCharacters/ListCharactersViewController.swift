@@ -51,7 +51,6 @@ final class ListCharactersViewController: UIViewController {
     
     private func configureUI() {
         title = "Rick and Morty!"
-
     }
     
 }
@@ -79,11 +78,18 @@ extension ListCharactersViewController: UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableview.dequeueReusableCell(withIdentifier: "CharacterCell", for: indexPath) as! CharacterCell
         cell.configureCell(with: self.characters?[indexPath.row])
+        cell.selectionStyle = .none
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         80
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let character = self.characters?[indexPath.row] {
+            router?.showDetails(for: character)
+        }
     }
 }

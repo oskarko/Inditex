@@ -23,6 +23,11 @@
                             <constraint firstAttribute="width" constant="60" id="I4U-KA-to4"/>
                             <constraint firstAttribute="height" constant="60" id="osJ-JT-DJN"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="3vz-dd-dNr">
                         <rect key="frame" x="84" y="10" width="220" height="21"/>

@@ -9,7 +9,7 @@
 import Foundation
 
 protocol ListCharactersRoutingLogic {
-    
+    func showDetails(for character: Character)
 }
 
 final class ListCharactersRouter: ListCharactersRoutingLogic {
@@ -19,5 +19,10 @@ final class ListCharactersRouter: ListCharactersRoutingLogic {
     weak var viewController: ListCharactersViewController?
     
     // MARK: - Routes
+    
+    func showDetails(for character: Character) {
+        let detailsView = CharacterDetailsConfiguration.getViewController(for: character)
+        viewController?.navigationController?.pushViewController(detailsView, animated: true)
+    }
     
 }

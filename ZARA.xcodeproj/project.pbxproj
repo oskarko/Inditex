@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		E23EA0BC28C5CBF700F04D88 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23EA0BB28C5CBF700F04D88 /* Cache.swift */; };
 		E23EA0BE28C5E06500F04D88 /* FetchCharactersUseCaseOutputComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23EA0BD28C5E06500F04D88 /* FetchCharactersUseCaseOutputComposer.swift */; };
+		E23EA0C628C5E38000F04D88 /* CharacterDetailsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23EA0C028C5E38000F04D88 /* CharacterDetailsConfiguration.swift */; };
+		E23EA0C728C5E38000F04D88 /* CharacterDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23EA0C128C5E38000F04D88 /* CharacterDetailsPresenter.swift */; };
+		E23EA0C828C5E38000F04D88 /* CharacterDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23EA0C228C5E38000F04D88 /* CharacterDetailsRouter.swift */; };
+		E23EA0C928C5E38000F04D88 /* CharacterDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23EA0C328C5E38000F04D88 /* CharacterDetailsViewController.swift */; };
+		E23EA0CA28C5E38000F04D88 /* CharacterDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23EA0C428C5E38000F04D88 /* CharacterDetailsInteractor.swift */; };
+		E23EA0CB28C5E38000F04D88 /* CharacterDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E23EA0C528C5E38000F04D88 /* CharacterDetailsViewController.xib */; };
 		E26704A528C51A9E009B9F24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26704A428C51A9E009B9F24 /* AppDelegate.swift */; };
 		E26704A728C51A9E009B9F24 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26704A628C51A9E009B9F24 /* SceneDelegate.swift */; };
 		E26704AE28C51A9F009B9F24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E26704AD28C51A9F009B9F24 /* Assets.xcassets */; };
@@ -57,6 +63,12 @@
 /* Begin PBXFileReference section */
 		E23EA0BB28C5CBF700F04D88 /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
 		E23EA0BD28C5E06500F04D88 /* FetchCharactersUseCaseOutputComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchCharactersUseCaseOutputComposer.swift; sourceTree = "<group>"; };
+		E23EA0C028C5E38000F04D88 /* CharacterDetailsConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsConfiguration.swift; sourceTree = "<group>"; };
+		E23EA0C128C5E38000F04D88 /* CharacterDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsPresenter.swift; sourceTree = "<group>"; };
+		E23EA0C228C5E38000F04D88 /* CharacterDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsRouter.swift; sourceTree = "<group>"; };
+		E23EA0C328C5E38000F04D88 /* CharacterDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsViewController.swift; sourceTree = "<group>"; };
+		E23EA0C428C5E38000F04D88 /* CharacterDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsInteractor.swift; sourceTree = "<group>"; };
+		E23EA0C528C5E38000F04D88 /* CharacterDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterDetailsViewController.xib; sourceTree = "<group>"; };
 		E26704A128C51A9E009B9F24 /* ZARA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZARA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E26704A428C51A9E009B9F24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E26704A628C51A9E009B9F24 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -120,6 +132,19 @@
 				E23EA0BB28C5CBF700F04D88 /* Cache.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		E23EA0BF28C5E36C00F04D88 /* CharacterDetails */ = {
+			isa = PBXGroup;
+			children = (
+				E23EA0C028C5E38000F04D88 /* CharacterDetailsConfiguration.swift */,
+				E23EA0C228C5E38000F04D88 /* CharacterDetailsRouter.swift */,
+				E23EA0C128C5E38000F04D88 /* CharacterDetailsPresenter.swift */,
+				E23EA0C428C5E38000F04D88 /* CharacterDetailsInteractor.swift */,
+				E23EA0C328C5E38000F04D88 /* CharacterDetailsViewController.swift */,
+				E23EA0C528C5E38000F04D88 /* CharacterDetailsViewController.xib */,
+			);
+			path = CharacterDetails;
 			sourceTree = "<group>";
 		};
 		E267049828C51A9E009B9F24 = {
@@ -194,6 +219,7 @@
 		E26704D628C51B19009B9F24 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				E23EA0BF28C5E36C00F04D88 /* CharacterDetails */,
 				E26704D728C51B2C009B9F24 /* ListCharacters */,
 			);
 			path = Scenes;
@@ -377,6 +403,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E26704DF28C51B85009B9F24 /* ListCharactersViewController.xib in Resources */,
+				E23EA0CB28C5E38000F04D88 /* CharacterDetailsViewController.xib in Resources */,
 				E26704B128C51A9F009B9F24 /* LaunchScreen.storyboard in Resources */,
 				E26704AE28C51A9F009B9F24 /* Assets.xcassets in Resources */,
 				E267050328C535A9009B9F24 /* CharacterCell.xib in Resources */,
@@ -411,10 +438,14 @@
 				E26704EC28C52647009B9F24 /* NetworkRequester.swift in Sources */,
 				E26704E628C5258D009B9F24 /* FetchCharactersUseCase.swift in Sources */,
 				E23EA0BC28C5CBF700F04D88 /* Cache.swift in Sources */,
+				E23EA0C628C5E38000F04D88 /* CharacterDetailsConfiguration.swift in Sources */,
 				E26704ED28C52647009B9F24 /* NetworkRequest.swift in Sources */,
 				E26704F228C52655009B9F24 /* APIErrorResponse.swift in Sources */,
 				E26704A528C51A9E009B9F24 /* AppDelegate.swift in Sources */,
+				E23EA0C828C5E38000F04D88 /* CharacterDetailsRouter.swift in Sources */,
+				E23EA0C928C5E38000F04D88 /* CharacterDetailsViewController.swift in Sources */,
 				E26704FA28C52836009B9F24 /* CharactersService.swift in Sources */,
+				E23EA0CA28C5E38000F04D88 /* CharacterDetailsInteractor.swift in Sources */,
 				E26704E328C51FF6009B9F24 /* ListCharactersInteractor.swift in Sources */,
 				E26704F528C52655009B9F24 /* ResultResponse.swift in Sources */,
 				E26704FE28C528BE009B9F24 /* CharactersResponse.swift in Sources */,
@@ -424,6 +455,7 @@
 				E26704DE28C51B85009B9F24 /* ListCharactersPresenter.swift in Sources */,
 				E26704E128C51CB1009B9F24 /* ListCharactersConfiguration.swift in Sources */,
 				E26704A728C51A9E009B9F24 /* SceneDelegate.swift in Sources */,
+				E23EA0C728C5E38000F04D88 /* CharacterDetailsPresenter.swift in Sources */,
 				E26704FC28C528B2009B9F24 /* CharactersRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

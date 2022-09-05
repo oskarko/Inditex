@@ -17,8 +17,6 @@ class CharacterCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        characterImageView.layer.cornerRadius = 8
     }
     
     func configureCell(with character: Character?) {

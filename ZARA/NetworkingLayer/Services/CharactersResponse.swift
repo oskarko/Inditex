@@ -44,6 +44,8 @@ struct Character: Codable {
     let species: String
     let type: String
     let gender: String
+    let origin: Location
+    let location: Location
     let image: String
     
     enum CodingKeys: String, CodingKey {
@@ -53,6 +55,20 @@ struct Character: Codable {
         case species
         case type
         case gender
+        case origin
+        case location
         case image
+    }
+}
+
+// MARK: - Location
+
+struct Location: Codable {
+    let name: String
+    let url: String
+    
+    enum CodingKeys: String, CodingKey {
+        case name
+        case url
     }
 }
