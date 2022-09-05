@@ -11,12 +11,15 @@ Technical test for the Inditex Group (ZARA)
 - Run the project 🥳
 
 
-Screenshots:
+Screenshots Light and Dark theme:
 
-![alt tag1](images/image1.png)
-![alt tag2](images/image2.png)
-![alt tag3](images/image3.png)
-![alt tag4](images/image4.png)
+![alt tag1](images/image01.png)
+![alt tag2](images/image04.png)
+
+Screenshots Details View and Error View:
+
+![alt tag3](images/image02.png)
+![alt tag4](images/image03.png)
 
 
 
