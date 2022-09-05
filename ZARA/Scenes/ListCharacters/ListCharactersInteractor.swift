@@ -21,8 +21,8 @@ final class ListCharactersInteractor: ListCharactersBusinessLogic {
 
     // MARK: - Lifecycle
     
-    init(_ composer: FetchCharactersUseCaseOutputComposer) {
-        self.useCase = FetchCharactersUseCase(output: composer)
+    init(_ useCase: FetchCharactersUseCase) {
+        self.useCase = useCase
     }
     
     // MARK: - Helpers

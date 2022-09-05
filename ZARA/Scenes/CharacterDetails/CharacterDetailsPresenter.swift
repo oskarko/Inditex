@@ -10,9 +10,7 @@
 
 import Foundation
 
-protocol CharacterDetailsDisplayLogic: AnyObject {
-
-}
+protocol CharacterDetailsDisplayLogic: AnyObject { }
 
 final class CharacterDetailsPresenter {
     

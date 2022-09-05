@@ -9,15 +9,20 @@
 
 import Foundation
 
+protocol FetchCharactersUseCase {
+    var output: FetchCharactersUseCaseOutput { get }
+    func start()
+}
+
 protocol FetchCharactersUseCaseOutput {
     func fetchCharactersSucceeded(_ characters: [Character])
     func fetchCharactersFailed(error: APIErrorResponse)
 }
 
-final class FetchCharactersUseCase {
+final class FetchCharactersUseCaseImp: FetchCharactersUseCase {
     
     private var service: CharactersServiceProtocol
-    private let output: FetchCharactersUseCaseOutput
+    var output: FetchCharactersUseCaseOutput
     
     init(_ service: CharactersServiceProtocol = CharactersService(), output: FetchCharactersUseCaseOutput) {
         self.service = service

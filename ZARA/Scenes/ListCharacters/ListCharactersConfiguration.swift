@@ -23,14 +23,15 @@ extension ListCharactersConfiguration {
     
     private static func configureModule() -> ListCharactersModule {
         let viewController = ListCharactersViewController()
-        let presenter = ListCharactersPresenter()
-        let composer = FetchCharactersUseCaseOutputComposer([presenter])
-        let interactor = ListCharactersInteractor(composer)
+        let useCase = FetchCharactersUseCaseFactory().makeUseCase()
+        let composer = useCase.output as? FetchCharactersUseCaseOutputComposer
+        let presenter = composer?.outputs.first as? ListCharactersPresenter
+        let interactor = ListCharactersInteractor(useCase)
         let router = ListCharactersRouter()
 
         viewController.interactor = interactor
         viewController.router = router
-        presenter.view = viewController
+        presenter?.view = viewController
         router.viewController = viewController
 
         return ListCharactersModule(viewController: viewController,
@@ -41,8 +42,8 @@ extension ListCharactersConfiguration {
     
     private struct ListCharactersModule {
         let viewController: ListCharactersViewController
-        let interactor: ListCharactersInteractor
-        let presenter: ListCharactersPresenter
-        let router: ListCharactersRouter
+        let interactor: ListCharactersInteractor?
+        let presenter: ListCharactersPresenter?
+        let router: ListCharactersRouter?
     }
 }

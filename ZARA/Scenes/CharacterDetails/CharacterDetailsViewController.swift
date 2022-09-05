@@ -60,6 +60,4 @@ final class CharacterDetailsViewController: UIViewController {
 
 // MARK: - CharacterDetailsDisplayLogic
 
-extension CharacterDetailsViewController: CharacterDetailsDisplayLogic {
-    
-}
+extension CharacterDetailsViewController: CharacterDetailsDisplayLogic { }

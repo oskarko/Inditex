@@ -10,9 +10,7 @@
 
 import Foundation
 
-protocol CharacterDetailsBusinessLogic {
-
-}
+protocol CharacterDetailsBusinessLogic { }
 
 final class CharacterDetailsInteractor: CharacterDetailsBusinessLogic {
     

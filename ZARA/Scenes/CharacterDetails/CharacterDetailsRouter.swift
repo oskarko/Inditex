@@ -10,9 +10,7 @@
 
 import Foundation
 
-protocol CharacterDetailsRoutingLogic {
-    
-}
+protocol CharacterDetailsRoutingLogic { }
 
 final class CharacterDetailsRouter: CharacterDetailsRoutingLogic {
     

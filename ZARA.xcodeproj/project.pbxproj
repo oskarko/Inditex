@@ -15,6 +15,12 @@
 		E23EA0C928C5E38000F04D88 /* CharacterDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23EA0C328C5E38000F04D88 /* CharacterDetailsViewController.swift */; };
 		E23EA0CA28C5E38000F04D88 /* CharacterDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23EA0C428C5E38000F04D88 /* CharacterDetailsInteractor.swift */; };
 		E23EA0CB28C5E38000F04D88 /* CharacterDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E23EA0C528C5E38000F04D88 /* CharacterDetailsViewController.xib */; };
+		E23EA0CD28C5F4B100F04D88 /* FetchCharactersUseCaseOutputComposerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23EA0CC28C5F4B100F04D88 /* FetchCharactersUseCaseOutputComposerTests.swift */; };
+		E23EA0CF28C5F5F100F04D88 /* FetchCharactersUseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23EA0CE28C5F5F100F04D88 /* FetchCharactersUseCaseFactory.swift */; };
+		E23EA0D128C5F7F000F04D88 /* FetchCharactersUseCaseFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23EA0D028C5F7F000F04D88 /* FetchCharactersUseCaseFactoryTests.swift */; };
+		E23EA0D728C5FD4B00F04D88 /* ListCharactersInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23EA0D628C5FD4B00F04D88 /* ListCharactersInteractorTests.swift */; };
+		E23EA0D928C5FD5900F04D88 /* ListCharactersPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23EA0D828C5FD5900F04D88 /* ListCharactersPresenterTests.swift */; };
+		E23EA0DD28C5FD7B00F04D88 /* ListCharactersViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23EA0DC28C5FD7B00F04D88 /* ListCharactersViewControllerTests.swift */; };
 		E26704A528C51A9E009B9F24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26704A428C51A9E009B9F24 /* AppDelegate.swift */; };
 		E26704A728C51A9E009B9F24 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26704A628C51A9E009B9F24 /* SceneDelegate.swift */; };
 		E26704AE28C51A9F009B9F24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E26704AD28C51A9F009B9F24 /* Assets.xcassets */; };
@@ -69,6 +75,12 @@
 		E23EA0C328C5E38000F04D88 /* CharacterDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsViewController.swift; sourceTree = "<group>"; };
 		E23EA0C428C5E38000F04D88 /* CharacterDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsInteractor.swift; sourceTree = "<group>"; };
 		E23EA0C528C5E38000F04D88 /* CharacterDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterDetailsViewController.xib; sourceTree = "<group>"; };
+		E23EA0CC28C5F4B100F04D88 /* FetchCharactersUseCaseOutputComposerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchCharactersUseCaseOutputComposerTests.swift; sourceTree = "<group>"; };
+		E23EA0CE28C5F5F100F04D88 /* FetchCharactersUseCaseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchCharactersUseCaseFactory.swift; sourceTree = "<group>"; };
+		E23EA0D028C5F7F000F04D88 /* FetchCharactersUseCaseFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchCharactersUseCaseFactoryTests.swift; sourceTree = "<group>"; };
+		E23EA0D628C5FD4B00F04D88 /* ListCharactersInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCharactersInteractorTests.swift; sourceTree = "<group>"; };
+		E23EA0D828C5FD5900F04D88 /* ListCharactersPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCharactersPresenterTests.swift; sourceTree = "<group>"; };
+		E23EA0DC28C5FD7B00F04D88 /* ListCharactersViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCharactersViewControllerTests.swift; sourceTree = "<group>"; };
 		E26704A128C51A9E009B9F24 /* ZARA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZARA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E26704A428C51A9E009B9F24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E26704A628C51A9E009B9F24 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -147,6 +159,42 @@
 			path = CharacterDetails;
 			sourceTree = "<group>";
 		};
+		E23EA0D228C5FBFD00F04D88 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				E23EA0BD28C5E06500F04D88 /* FetchCharactersUseCaseOutputComposer.swift */,
+				E23EA0CE28C5F5F100F04D88 /* FetchCharactersUseCaseFactory.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		E23EA0D328C5FC1700F04D88 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				E23EA0CC28C5F4B100F04D88 /* FetchCharactersUseCaseOutputComposerTests.swift */,
+				E23EA0D028C5F7F000F04D88 /* FetchCharactersUseCaseFactoryTests.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		E23EA0D428C5FC2400F04D88 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				E23EA0D528C5FC2D00F04D88 /* ListCharacters */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		E23EA0D528C5FC2D00F04D88 /* ListCharacters */ = {
+			isa = PBXGroup;
+			children = (
+				E23EA0D828C5FD5900F04D88 /* ListCharactersPresenterTests.swift */,
+				E23EA0D628C5FD4B00F04D88 /* ListCharactersInteractorTests.swift */,
+				E23EA0DC28C5FD7B00F04D88 /* ListCharactersViewControllerTests.swift */,
+			);
+			path = ListCharacters;
+			sourceTree = "<group>";
+		};
 		E267049828C51A9E009B9F24 = {
 			isa = PBXGroup;
 			children = (
@@ -175,6 +223,7 @@
 				E26704E728C52600009B9F24 /* NetworkingLayer */,
 				E23EA0BA28C5CBE300F04D88 /* Managers */,
 				E26704E428C5255C009B9F24 /* Business Logic */,
+				E23EA0D228C5FBFD00F04D88 /* Main */,
 				E26704D628C51B19009B9F24 /* Scenes */,
 				E26704B228C51A9F009B9F24 /* Info.plist */,
 			);
@@ -184,6 +233,8 @@
 		E26704BA28C51AA0009B9F24 /* ZARATests */ = {
 			isa = PBXGroup;
 			children = (
+				E23EA0D428C5FC2400F04D88 /* Scenes */,
+				E23EA0D328C5FC1700F04D88 /* Main */,
 				E26704BB28C51AA0009B9F24 /* ZARATests.swift */,
 			);
 			path = ZARATests;
@@ -243,7 +294,6 @@
 			isa = PBXGroup;
 			children = (
 				E26704E528C5258C009B9F24 /* FetchCharactersUseCase.swift */,
-				E23EA0BD28C5E06500F04D88 /* FetchCharactersUseCaseOutputComposer.swift */,
 			);
 			path = "Business Logic";
 			sourceTree = "<group>";
@@ -440,6 +490,7 @@
 				E23EA0BC28C5CBF700F04D88 /* Cache.swift in Sources */,
 				E23EA0C628C5E38000F04D88 /* CharacterDetailsConfiguration.swift in Sources */,
 				E26704ED28C52647009B9F24 /* NetworkRequest.swift in Sources */,
+				E23EA0CF28C5F5F100F04D88 /* FetchCharactersUseCaseFactory.swift in Sources */,
 				E26704F228C52655009B9F24 /* APIErrorResponse.swift in Sources */,
 				E26704A528C51A9E009B9F24 /* AppDelegate.swift in Sources */,
 				E23EA0C828C5E38000F04D88 /* CharacterDetailsRouter.swift in Sources */,
@@ -464,7 +515,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E23EA0D728C5FD4B00F04D88 /* ListCharactersInteractorTests.swift in Sources */,
+				E23EA0D928C5FD5900F04D88 /* ListCharactersPresenterTests.swift in Sources */,
+				E23EA0DD28C5FD7B00F04D88 /* ListCharactersViewControllerTests.swift in Sources */,
+				E23EA0D128C5F7F000F04D88 /* FetchCharactersUseCaseFactoryTests.swift in Sources */,
 				E26704BC28C51AA0009B9F24 /* ZARATests.swift in Sources */,
+				E23EA0CD28C5F4B100F04D88 /* FetchCharactersUseCaseOutputComposerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
