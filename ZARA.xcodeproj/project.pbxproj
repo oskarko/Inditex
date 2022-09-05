@@ -27,6 +27,8 @@
 		E23EA0EE28C60FDC00F04D88 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23EA0E828C60FDC00F04D88 /* AlertViewController.swift */; };
 		E23EA0EF28C60FDC00F04D88 /* AlertInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23EA0E928C60FDC00F04D88 /* AlertInteractor.swift */; };
 		E23EA0F028C60FDC00F04D88 /* AlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E23EA0EA28C60FDC00F04D88 /* AlertViewController.xib */; };
+		E23EA0F228C615E000F04D88 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23EA0F128C615E000F04D88 /* Constants.swift */; };
+		E23EA0F428C6172700F04D88 /* CharactersRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23EA0F328C6172700F04D88 /* CharactersRequestModel.swift */; };
 		E26704A528C51A9E009B9F24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26704A428C51A9E009B9F24 /* AppDelegate.swift */; };
 		E26704A728C51A9E009B9F24 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26704A628C51A9E009B9F24 /* SceneDelegate.swift */; };
 		E26704AE28C51A9F009B9F24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E26704AD28C51A9F009B9F24 /* Assets.xcassets */; };
@@ -92,6 +94,8 @@
 		E23EA0E828C60FDC00F04D88 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		E23EA0E928C60FDC00F04D88 /* AlertInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertInteractor.swift; sourceTree = "<group>"; };
 		E23EA0EA28C60FDC00F04D88 /* AlertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertViewController.xib; sourceTree = "<group>"; };
+		E23EA0F128C615E000F04D88 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E23EA0F328C6172700F04D88 /* CharactersRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersRequestModel.swift; sourceTree = "<group>"; };
 		E26704A128C51A9E009B9F24 /* ZARA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZARA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E26704A428C51A9E009B9F24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E26704A628C51A9E009B9F24 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -174,6 +178,7 @@
 			children = (
 				E23EA0BD28C5E06500F04D88 /* FetchCharactersUseCaseOutputComposer.swift */,
 				E23EA0CE28C5F5F100F04D88 /* FetchCharactersUseCaseFactory.swift */,
+				E23EA0F128C615E000F04D88 /* Constants.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -357,6 +362,7 @@
 			children = (
 				E26704F928C52836009B9F24 /* CharactersService.swift */,
 				E26704FB28C528B2009B9F24 /* CharactersRequest.swift */,
+				E23EA0F328C6172700F04D88 /* CharactersRequestModel.swift */,
 				E26704FD28C528BE009B9F24 /* CharactersResponse.swift */,
 			);
 			path = Services;
@@ -528,11 +534,13 @@
 				E26704F528C52655009B9F24 /* ResultResponse.swift in Sources */,
 				E26704FE28C528BE009B9F24 /* CharactersResponse.swift in Sources */,
 				E26704F328C52655009B9F24 /* HTTPMethod.swift in Sources */,
+				E23EA0F228C615E000F04D88 /* Constants.swift in Sources */,
 				E23EA0BE28C5E06500F04D88 /* FetchCharactersUseCaseOutputComposer.swift in Sources */,
 				E267050228C535A9009B9F24 /* CharacterCell.swift in Sources */,
 				E26704DE28C51B85009B9F24 /* ListCharactersPresenter.swift in Sources */,
 				E26704E128C51CB1009B9F24 /* ListCharactersConfiguration.swift in Sources */,
 				E26704A728C51A9E009B9F24 /* SceneDelegate.swift in Sources */,
+				E23EA0F428C6172700F04D88 /* CharactersRequestModel.swift in Sources */,
 				E23EA0ED28C60FDC00F04D88 /* AlertRouter.swift in Sources */,
 				E23EA0C728C5E38000F04D88 /* CharacterDetailsPresenter.swift in Sources */,
 				E26704FC28C528B2009B9F24 /* CharactersRequest.swift in Sources */,

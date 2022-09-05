@@ -10,7 +10,7 @@
 import Foundation
 
 enum CharactersRequest {
-    case fetchCharacters
+    case fetchCharacters(_ model: CharactersRequestModel)
 }
 
 extension CharactersRequest: APIRequest {
@@ -23,8 +23,8 @@ extension CharactersRequest: APIRequest {
     
     var queryItems: [URLQueryItem]? {
         switch self {
-        case .fetchCharacters:
-            return [URLQueryItem(name: "page", value: "1")]
+        case let .fetchCharacters(model):
+            return [URLQueryItem(name: "page", value: String(model.page))]
         }
     }
 }

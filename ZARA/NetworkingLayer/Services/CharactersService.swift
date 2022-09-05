@@ -10,7 +10,7 @@
 import Foundation
 
 protocol CharactersServiceProtocol {
-    func fetchCharacters(completionHandler: @escaping (ResultResponse<CharactersResponse>) -> Void)
+    func fetchCharacters(_ model: CharactersRequestModel, completionHandler: @escaping (ResultResponse<CharactersResponse>) -> Void)
 }
 
 final class CharactersService: CharactersServiceProtocol {
@@ -22,8 +22,8 @@ final class CharactersService: CharactersServiceProtocol {
 
     // MARK: - HomeServiceProtocol Functions
 
-    func fetchCharacters(completionHandler: @escaping (ResultResponse<CharactersResponse>) -> Void) {
-        let request = CharactersRequest.fetchCharacters
+    func fetchCharacters(_ model: CharactersRequestModel, completionHandler: @escaping (ResultResponse<CharactersResponse>) -> Void) {
+        let request = CharactersRequest.fetchCharacters(model)
         networkRequester.doRequest(request: request, completionHandler: completionHandler)
     }
 

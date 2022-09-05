@@ -62,7 +62,7 @@ class ListCharactersViewControllerTests: XCTestCase {
     private class ListCharactersBusinessLogicSpy: ListCharactersBusinessLogic {
         var fetchCount = 0
         
-        func fetchCharacters() {
+        func fetchCharacters(offset: Int) {
             fetchCount += 1
         }
     }
@@ -70,10 +70,16 @@ class ListCharactersViewControllerTests: XCTestCase {
     private class ListCharactersRoutingLogicSpy: ListCharactersRoutingLogic {
         var showCount = 0
         var character: Character?
+        var message: String?
         
         func showDetails(for character: Character) {
             showCount += 1
             self.character = character
+        }
+        
+        func showAlert(with message: String) {
+            showCount += 1
+            self.message = message
         }
     }
 

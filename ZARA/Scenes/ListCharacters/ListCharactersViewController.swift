@@ -15,7 +15,7 @@ final class ListCharactersViewController: UIViewController {
     var interactor: ListCharactersBusinessLogic?
     var router: ListCharactersRoutingLogic?
     
-    private var characters: [Character]?
+    private var characters: [Character] = []
     
     @IBOutlet weak var tableview: UITableView!
     
@@ -35,7 +35,7 @@ final class ListCharactersViewController: UIViewController {
         
         setupTableview()
         configureUI()
-        interactor?.fetchCharacters()
+        interactor?.fetchCharacters(offset: characters.count)
     }
     
 
@@ -66,6 +66,14 @@ extension ListCharactersViewController: ListCharactersDisplayLogic {
         }
     }
     
+    func insertItems(with characters: [Character], at indexPathsToReload: [IndexPath]) {
+        self.characters = characters
+        
+        DispatchQueue.main.async {
+            self.tableview.insertRows(at: indexPathsToReload, with: .none)
+        }
+    }
+    
     func showAlert(with message: String) {
         DispatchQueue.main.async {
             self.router?.showAlert(with: message)
@@ -78,12 +86,12 @@ extension ListCharactersViewController: ListCharactersDisplayLogic {
 extension ListCharactersViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        self.characters?.count ?? 0
+        self.characters.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableview.dequeueReusableCell(withIdentifier: "CharacterCell", for: indexPath) as! CharacterCell
-        cell.configureCell(with: self.characters?[indexPath.row])
+        cell.configureCell(with: self.characters[indexPath.row])
         cell.selectionStyle = .none
         
         return cell
@@ -94,8 +102,27 @@ extension ListCharactersViewController: UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let character = self.characters?[indexPath.row] {
-            router?.showDetails(for: character)
-        }
+        let character = self.characters[indexPath.row]
+        router?.showDetails(for: character)
     }
 }
+
+// MARK: - UITableViewDataSourcePrefetching
+
+extension ListCharactersViewController: UITableViewDataSourcePrefetching {
+    func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
+        // If We're in the last cell, We'll try to fetch automatically
+        // the next characters in order to have an infinite scrolling effect.
+        if indexPaths.contains(where: isLastCell) {
+            interactor?.fetchCharacters(offset: characters.count)
+        }
+    }
+    
+    // MARK: - Helpers
+    
+    // This method helps to calculate if a cell is the last one in the tableView.
+    private func isLastCell(for indexPath: IndexPath) -> Bool {
+        return indexPath.row == characters.count - 1 && characters.count % Constants.CHARACTERS_BY_PAGE == 0
+    }
+}
+

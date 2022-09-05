@@ -20,7 +20,7 @@ struct NetworkRequester {
     func requestService<T: Decodable>(request: NetworkRequest, completion: @escaping (ResultResponse<T>) -> Void) {
         session.dataTask(with: request.request, completionHandler: { data, response, requestError in
             if let requestError = requestError {
-                completion(.failure(.init(message: requestError.localizedDescription)))
+                completion(.failure(.init(error: requestError.localizedDescription)))
                 return
             }
             guard let dataResponse = data else {
@@ -37,7 +37,7 @@ struct NetworkRequester {
                         completion(.failure(error))
                         return
                     } catch {
-                        completion(.failure(.init(message: error.localizedDescription)))
+                        completion(.failure(.init(error: error.localizedDescription)))
                         return
                     }
                 default: break

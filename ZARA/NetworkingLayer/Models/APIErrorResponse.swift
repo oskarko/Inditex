@@ -10,26 +10,17 @@
 import Foundation
 
 struct APIErrorResponse: Codable {
-    var status: String?
-    var code: String?
-    var message: String?
+    var error: String?
 
     enum CodingKeys: String, CodingKey {
-        case status
-        case code
-        case message
+        case error
     }
 
-    init(status: String? = nil,
-         code: String? = nil,
-         message: String? = nil)
-    {
-        self.status = status
-        self.status = status
-        self.message = message
+    init(error: String? = nil) {
+        self.error = error
     }
 
-    static let badURL: APIErrorResponse = .init(message: NSLocalizedString("Bad URL format", comment: ""))
-    static let invalidData: APIErrorResponse = .init(message: NSLocalizedString("Invalid data", comment: ""))
-    static let invalidJSON: APIErrorResponse = .init(message: NSLocalizedString("The server response didnt match our model", comment: ""))
+    static let badURL: APIErrorResponse = .init(error: NSLocalizedString("Bad URL format", comment: ""))
+    static let invalidData: APIErrorResponse = .init(error: NSLocalizedString("Invalid data", comment: ""))
+    static let invalidJSON: APIErrorResponse = .init(error: NSLocalizedString("The server response didnt match our model", comment: ""))
 }

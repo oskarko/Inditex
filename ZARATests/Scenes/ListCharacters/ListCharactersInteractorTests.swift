@@ -20,7 +20,7 @@ class ListCharactersInteractorTests: XCTestCase {
         
         // When
         useCaseSpy.shouldSucceed = true
-        sut.fetchCharacters()
+        sut.fetchCharacters(offset: 0)
         
         // Then
         XCTAssertEqual(outputSpy.fetchSucceededCallCount, 1)
@@ -35,7 +35,7 @@ class ListCharactersInteractorTests: XCTestCase {
         
         // When
         useCaseSpy.shouldSucceed = false
-        sut.fetchCharacters()
+        sut.fetchCharacters(offset: 0)
         
         // Then
         XCTAssertEqual(outputSpy.fetchSucceededCallCount, 0)
@@ -52,7 +52,7 @@ class ListCharactersInteractorTests: XCTestCase {
             self.output = output
         }
         
-        func start() {
+        func start(offset: Int) {
             if shouldSucceed {
                 output.fetchCharactersSucceeded([])
             } else {

@@ -10,7 +10,7 @@
 import Foundation
 
 protocol ListCharactersBusinessLogic {
-    func fetchCharacters()
+    func fetchCharacters(offset: Int)
 }
 
 final class ListCharactersInteractor: ListCharactersBusinessLogic {
@@ -27,7 +27,7 @@ final class ListCharactersInteractor: ListCharactersBusinessLogic {
     
     // MARK: - Helpers
     
-    func fetchCharacters() {
-        useCase.start()
+    func fetchCharacters(offset: Int) {
+        useCase.start(offset: offset)
     }
 }

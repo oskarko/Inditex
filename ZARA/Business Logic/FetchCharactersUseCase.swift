@@ -11,7 +11,7 @@ import Foundation
 
 protocol FetchCharactersUseCase {
     var output: FetchCharactersUseCaseOutput { get }
-    func start()
+    func start(offset: Int)
 }
 
 protocol FetchCharactersUseCaseOutput {
@@ -29,14 +29,17 @@ final class FetchCharactersUseCaseImp: FetchCharactersUseCase {
         self.output = output
     }
     
-    func start() {
-        service.fetchCharacters(completionHandler: { [weak self] result in
+    func start(offset: Int) {
+        let page = (offset / Constants.CHARACTERS_BY_PAGE) + 1
+        let model = CharactersRequestModel(page: page)
+        service.fetchCharacters(model, completionHandler: { [weak self] result in
             guard let self = self else { return }
 
             switch result {
             case let .success(charactersResponse):
                 self.output.fetchCharactersSucceeded(charactersResponse.results)
             case let .failure(error):
+                    print(error)
                 self.output.fetchCharactersFailed(error: error)
             }
         })
