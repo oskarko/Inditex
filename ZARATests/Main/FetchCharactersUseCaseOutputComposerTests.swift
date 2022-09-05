@@ -13,28 +13,37 @@ import XCTest
 class FetchCharactersUseCaseOutputComposerTests: XCTestCase {
 
     func test_composingZeroOutputs_doesNotCrash() {
+        // Given
         let sut = FetchCharactersUseCaseOutputComposer([])
+        
+        // When
         sut.fetchCharactersSucceeded([])
         sut.fetchCharactersFailed(error: .invalidJSON)
     }
     
     func test_composingOneOutput_delegatesSucceededMessage() {
+        // Given
         let output1 = FetchCharactersUseCaseOutputSpy()
         let sut = FetchCharactersUseCaseOutputComposer([output1])
         
+        // When
         sut.fetchCharactersSucceeded([])
         
+        // Then
         XCTAssertEqual(output1.fetchSucceededCallCount, 1)
         XCTAssertEqual(output1.fetchFailedCallCount, 0)
     }
     
     func test_composingMultipleOutputs_delegatesSucceededMessage() {
+        // Given
         let output1 = FetchCharactersUseCaseOutputSpy()
         let output2 = FetchCharactersUseCaseOutputSpy()
         let sut = FetchCharactersUseCaseOutputComposer([output1, output2])
         
+        // When
         sut.fetchCharactersSucceeded([])
         
+        // Then
         XCTAssertEqual(output1.fetchSucceededCallCount, 1)
         XCTAssertEqual(output1.fetchFailedCallCount, 0)
         
@@ -43,12 +52,15 @@ class FetchCharactersUseCaseOutputComposerTests: XCTestCase {
     }
     
     func test_composingMultipleOutputs_delegatesFailedMessage() {
+        // Given
         let output1 = FetchCharactersUseCaseOutputSpy()
         let output2 = FetchCharactersUseCaseOutputSpy()
         let sut = FetchCharactersUseCaseOutputComposer([output1, output2])
         
+        // When
         sut.fetchCharactersFailed(error: .badURL)
         
+        // Then
         XCTAssertEqual(output1.fetchSucceededCallCount, 0)
         XCTAssertEqual(output1.fetchFailedCallCount, 1)
         

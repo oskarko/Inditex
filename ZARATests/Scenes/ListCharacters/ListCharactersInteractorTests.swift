@@ -13,25 +13,31 @@ import XCTest
 class ListCharactersInteractorTests: XCTestCase {
 
     func test_fetchCharacters_delegatesSucceededMessage() {
+        // Given
         let outputSpy = FetchCharactersUseCaseOutputComposerSpy()
         let useCaseSpy = FetchCharactersUseCaseSpy(outputSpy)
         let sut = ListCharactersInteractor(useCaseSpy)
         
+        // When
         useCaseSpy.shouldSucceed = true
         sut.fetchCharacters()
         
+        // Then
         XCTAssertEqual(outputSpy.fetchSucceededCallCount, 1)
         XCTAssertEqual(outputSpy.fetchFailedCallCount, 0)
     }
     
     func test_fetchCharacters_delegatesFailedMessage() {
+        // Given
         let outputSpy = FetchCharactersUseCaseOutputComposerSpy()
         let useCaseSpy = FetchCharactersUseCaseSpy(outputSpy)
         let sut = ListCharactersInteractor(useCaseSpy)
         
+        // When
         useCaseSpy.shouldSucceed = false
         sut.fetchCharacters()
         
+        // Then
         XCTAssertEqual(outputSpy.fetchSucceededCallCount, 0)
         XCTAssertEqual(outputSpy.fetchFailedCallCount, 1)
     }

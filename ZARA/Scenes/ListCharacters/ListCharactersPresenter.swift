@@ -10,6 +10,7 @@ import Foundation
 
 protocol ListCharactersDisplayLogic: AnyObject {
     func reloadData(with characters: [Character])
+    func showAlert(with message: String)
 }
 
 final class ListCharactersPresenter {
@@ -33,7 +34,7 @@ extension ListCharactersPresenter: FetchCharactersUseCaseOutput {
     }
     
     func fetchCharactersFailed(error: APIErrorResponse) {
-        print("presenter fetchCharactersFailed: ", error.message ?? "unknown error")
+        view?.showAlert(with: error.message ?? "unknown error")
     }
     
     

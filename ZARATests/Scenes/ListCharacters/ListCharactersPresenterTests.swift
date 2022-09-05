@@ -13,12 +13,15 @@ import XCTest
 class ListCharactersPresenterTests: XCTestCase {
 
     func test_fetchCharacters_delegatesSucceededMessage() {
+        // Given
         let sut = ListCharactersPresenter()
         let view = ListCharactersDisplayLogicSpy()
         sut.view = view
         
+        // When
         sut.fetchCharactersSucceeded([])
         
+        // Then
         XCTAssertEqual(view.reloadCount, 1)
     }
     

@@ -21,11 +21,16 @@
 		E23EA0D728C5FD4B00F04D88 /* ListCharactersInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23EA0D628C5FD4B00F04D88 /* ListCharactersInteractorTests.swift */; };
 		E23EA0D928C5FD5900F04D88 /* ListCharactersPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23EA0D828C5FD5900F04D88 /* ListCharactersPresenterTests.swift */; };
 		E23EA0DD28C5FD7B00F04D88 /* ListCharactersViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23EA0DC28C5FD7B00F04D88 /* ListCharactersViewControllerTests.swift */; };
+		E23EA0EB28C60FDC00F04D88 /* AlertConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23EA0E528C60FDC00F04D88 /* AlertConfiguration.swift */; };
+		E23EA0EC28C60FDC00F04D88 /* AlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23EA0E628C60FDC00F04D88 /* AlertPresenter.swift */; };
+		E23EA0ED28C60FDC00F04D88 /* AlertRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23EA0E728C60FDC00F04D88 /* AlertRouter.swift */; };
+		E23EA0EE28C60FDC00F04D88 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23EA0E828C60FDC00F04D88 /* AlertViewController.swift */; };
+		E23EA0EF28C60FDC00F04D88 /* AlertInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23EA0E928C60FDC00F04D88 /* AlertInteractor.swift */; };
+		E23EA0F028C60FDC00F04D88 /* AlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E23EA0EA28C60FDC00F04D88 /* AlertViewController.xib */; };
 		E26704A528C51A9E009B9F24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26704A428C51A9E009B9F24 /* AppDelegate.swift */; };
 		E26704A728C51A9E009B9F24 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26704A628C51A9E009B9F24 /* SceneDelegate.swift */; };
 		E26704AE28C51A9F009B9F24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E26704AD28C51A9F009B9F24 /* Assets.xcassets */; };
 		E26704B128C51A9F009B9F24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E26704AF28C51A9F009B9F24 /* LaunchScreen.storyboard */; };
-		E26704BC28C51AA0009B9F24 /* ZARATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26704BB28C51AA0009B9F24 /* ZARATests.swift */; };
 		E26704C628C51AA0009B9F24 /* ZARAUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26704C528C51AA0009B9F24 /* ZARAUITests.swift */; };
 		E26704C828C51AA0009B9F24 /* ZARAUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26704C728C51AA0009B9F24 /* ZARAUITestsLaunchTests.swift */; };
 		E26704DC28C51B85009B9F24 /* ListCharactersRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26704D828C51B85009B9F24 /* ListCharactersRouter.swift */; };
@@ -81,6 +86,12 @@
 		E23EA0D628C5FD4B00F04D88 /* ListCharactersInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCharactersInteractorTests.swift; sourceTree = "<group>"; };
 		E23EA0D828C5FD5900F04D88 /* ListCharactersPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCharactersPresenterTests.swift; sourceTree = "<group>"; };
 		E23EA0DC28C5FD7B00F04D88 /* ListCharactersViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCharactersViewControllerTests.swift; sourceTree = "<group>"; };
+		E23EA0E528C60FDC00F04D88 /* AlertConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertConfiguration.swift; sourceTree = "<group>"; };
+		E23EA0E628C60FDC00F04D88 /* AlertPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresenter.swift; sourceTree = "<group>"; };
+		E23EA0E728C60FDC00F04D88 /* AlertRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertRouter.swift; sourceTree = "<group>"; };
+		E23EA0E828C60FDC00F04D88 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
+		E23EA0E928C60FDC00F04D88 /* AlertInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertInteractor.swift; sourceTree = "<group>"; };
+		E23EA0EA28C60FDC00F04D88 /* AlertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertViewController.xib; sourceTree = "<group>"; };
 		E26704A128C51A9E009B9F24 /* ZARA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZARA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E26704A428C51A9E009B9F24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E26704A628C51A9E009B9F24 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,7 +99,6 @@
 		E26704B028C51A9F009B9F24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E26704B228C51A9F009B9F24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E26704B728C51AA0009B9F24 /* ZARATests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZARATests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E26704BB28C51AA0009B9F24 /* ZARATests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZARATests.swift; sourceTree = "<group>"; };
 		E26704C128C51AA0009B9F24 /* ZARAUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZARAUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E26704C528C51AA0009B9F24 /* ZARAUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZARAUITests.swift; sourceTree = "<group>"; };
 		E26704C728C51AA0009B9F24 /* ZARAUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZARAUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -195,6 +205,19 @@
 			path = ListCharacters;
 			sourceTree = "<group>";
 		};
+		E23EA0E428C60FB600F04D88 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				E23EA0E528C60FDC00F04D88 /* AlertConfiguration.swift */,
+				E23EA0E728C60FDC00F04D88 /* AlertRouter.swift */,
+				E23EA0E628C60FDC00F04D88 /* AlertPresenter.swift */,
+				E23EA0E928C60FDC00F04D88 /* AlertInteractor.swift */,
+				E23EA0E828C60FDC00F04D88 /* AlertViewController.swift */,
+				E23EA0EA28C60FDC00F04D88 /* AlertViewController.xib */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
 		E267049828C51A9E009B9F24 = {
 			isa = PBXGroup;
 			children = (
@@ -235,7 +258,6 @@
 			children = (
 				E23EA0D428C5FC2400F04D88 /* Scenes */,
 				E23EA0D328C5FC1700F04D88 /* Main */,
-				E26704BB28C51AA0009B9F24 /* ZARATests.swift */,
 			);
 			path = ZARATests;
 			sourceTree = "<group>";
@@ -270,6 +292,7 @@
 		E26704D628C51B19009B9F24 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				E23EA0E428C60FB600F04D88 /* Alert */,
 				E23EA0BF28C5E36C00F04D88 /* CharacterDetails */,
 				E26704D728C51B2C009B9F24 /* ListCharacters */,
 			);
@@ -457,6 +480,7 @@
 				E26704B128C51A9F009B9F24 /* LaunchScreen.storyboard in Resources */,
 				E26704AE28C51A9F009B9F24 /* Assets.xcassets in Resources */,
 				E267050328C535A9009B9F24 /* CharacterCell.xib in Resources */,
+				E23EA0F028C60FDC00F04D88 /* AlertViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,16 +508,19 @@
 				E26704DD28C51B85009B9F24 /* ListCharactersViewController.swift in Sources */,
 				E26704F728C5265E009B9F24 /* APIPath.swift in Sources */,
 				E26704DC28C51B85009B9F24 /* ListCharactersRouter.swift in Sources */,
+				E23EA0EF28C60FDC00F04D88 /* AlertInteractor.swift in Sources */,
 				E26704F428C52655009B9F24 /* APIRequest.swift in Sources */,
 				E26704EC28C52647009B9F24 /* NetworkRequester.swift in Sources */,
 				E26704E628C5258D009B9F24 /* FetchCharactersUseCase.swift in Sources */,
 				E23EA0BC28C5CBF700F04D88 /* Cache.swift in Sources */,
+				E23EA0EB28C60FDC00F04D88 /* AlertConfiguration.swift in Sources */,
 				E23EA0C628C5E38000F04D88 /* CharacterDetailsConfiguration.swift in Sources */,
 				E26704ED28C52647009B9F24 /* NetworkRequest.swift in Sources */,
 				E23EA0CF28C5F5F100F04D88 /* FetchCharactersUseCaseFactory.swift in Sources */,
 				E26704F228C52655009B9F24 /* APIErrorResponse.swift in Sources */,
 				E26704A528C51A9E009B9F24 /* AppDelegate.swift in Sources */,
 				E23EA0C828C5E38000F04D88 /* CharacterDetailsRouter.swift in Sources */,
+				E23EA0EC28C60FDC00F04D88 /* AlertPresenter.swift in Sources */,
 				E23EA0C928C5E38000F04D88 /* CharacterDetailsViewController.swift in Sources */,
 				E26704FA28C52836009B9F24 /* CharactersService.swift in Sources */,
 				E23EA0CA28C5E38000F04D88 /* CharacterDetailsInteractor.swift in Sources */,
@@ -506,8 +533,10 @@
 				E26704DE28C51B85009B9F24 /* ListCharactersPresenter.swift in Sources */,
 				E26704E128C51CB1009B9F24 /* ListCharactersConfiguration.swift in Sources */,
 				E26704A728C51A9E009B9F24 /* SceneDelegate.swift in Sources */,
+				E23EA0ED28C60FDC00F04D88 /* AlertRouter.swift in Sources */,
 				E23EA0C728C5E38000F04D88 /* CharacterDetailsPresenter.swift in Sources */,
 				E26704FC28C528B2009B9F24 /* CharactersRequest.swift in Sources */,
+				E23EA0EE28C60FDC00F04D88 /* AlertViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -519,7 +548,6 @@
 				E23EA0D928C5FD5900F04D88 /* ListCharactersPresenterTests.swift in Sources */,
 				E23EA0DD28C5FD7B00F04D88 /* ListCharactersViewControllerTests.swift in Sources */,
 				E23EA0D128C5F7F000F04D88 /* FetchCharactersUseCaseFactoryTests.swift in Sources */,
-				E26704BC28C51AA0009B9F24 /* ZARATests.swift in Sources */,
 				E23EA0CD28C5F4B100F04D88 /* FetchCharactersUseCaseOutputComposerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

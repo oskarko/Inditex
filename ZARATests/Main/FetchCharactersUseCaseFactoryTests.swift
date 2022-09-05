@@ -13,10 +13,12 @@ import XCTest
 class FetchCharactersUseCaseFactoryTests: XCTestCase {
 
     func test() {
+        // Given
         let sut = FetchCharactersUseCaseFactory()
         let useCase = sut.makeUseCase()
         let composer = useCase.output as? FetchCharactersUseCaseOutputComposer
         
+        // Then
         XCTAssertNotNil(composer)
         XCTAssertEqual(composer?.outputs.count, 1)
         XCTAssertEqual(composer?.count(ofType: ListCharactersPresenter.self), 1)

@@ -65,6 +65,12 @@ extension ListCharactersViewController: ListCharactersDisplayLogic {
             self.tableview.reloadData()
         }
     }
+    
+    func showAlert(with message: String) {
+        DispatchQueue.main.async {
+            self.router?.showAlert(with: message)
+        }
+    }
 }
 
 // MARK: - UITableViewDataSource, UITableViewDelegate
